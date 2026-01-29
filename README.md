@@ -1,0 +1,1 @@
+Designing and developing a full-stack application with JWT authentication, role-based access, REST APIs, MongoDB schema optimization, and deployed using cloud services.
