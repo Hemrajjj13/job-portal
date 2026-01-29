@@ -2,8 +2,8 @@ import React from 'react'
 
 const Register = () => {
   return (
-    <div>Register</div>
-  )
-}
+    <h1 className='p-6'>Register Page</h1>
+  );
+};
 
-export default Register
+export default Register;
