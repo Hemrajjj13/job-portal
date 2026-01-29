@@ -1,10 +1,14 @@
 import React from 'react'
+import { BrowserRouter } from 'react-router-dom'
+import Navbar from '../components/common/Navbar'
+import AppRoutes from '../routes/AppRoutes'
 
 const App = () => {
   return (
-    <div>
-      <h2>Hemraj Suryawanshi</h2>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <AppRoutes />
+    </BrowserRouter>
   )
 }
 
