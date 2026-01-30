@@ -1,7 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import ProtectedRoute from "../components/common/ProtectedRoute";
+
 import RecruiterDashboard from "../pages/dashboard/RecruiterDashboard";
 import CandidateDashboard from "../pages/dashboard/CandidateDashboard";
+
 import Login from "../pages/auth/Login";
 import Register from "../pages/auth/Register";
 import Jobs from "../pages/jobs/Jobs";
@@ -15,8 +17,7 @@ const AppRoutes = () => {
         <Route path="/" element={<Jobs />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/jobs/:id" element={<JobDetails />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/jobs/:id" element={<JobDetails />} /> 
         <Route
           path="/dashboard/recruiter"
           element={
@@ -25,7 +26,6 @@ const AppRoutes = () => {
             </ProtectedRoute>
           }
         />
-
         <Route
           path="/dashboard/candidate"
           element={
@@ -34,6 +34,7 @@ const AppRoutes = () => {
             </ProtectedRoute>
           }
         />
+        <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };
