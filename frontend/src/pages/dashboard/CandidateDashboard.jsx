@@ -31,7 +31,7 @@ const CandidateDashboard = () => {
               <span className='font-semibold'>{app.status}</span>
             </p>
           </div> 
-        ))};
+        ))}
       </div>
     </div>
   );

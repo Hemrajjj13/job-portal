@@ -1,5 +1,6 @@
 import { useAuth } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
+import { loginUser } from '../../api/auth.api'
 
 
 const Login = () => {
@@ -14,7 +15,8 @@ const Login = () => {
       });
 
       login(response.data.user);
-      navigate("dashboard/candidate");
+
+      navigate("/dashboard/candidate");
     } catch (error) {
       console.error("Login failed", error);
     }

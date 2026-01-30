@@ -6,7 +6,7 @@ const JobDetails = () => {
   const [applied, setApplied] = useState(false);
   const [resume, setResume] = useState(null);
 
-  const handleApply = () {
+  const handleApply = () => {
     setApplied(true);
   };
 
