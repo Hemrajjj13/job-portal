@@ -6,15 +6,19 @@ const Login = () => {
   const { login } = useAuth();
   const navigate = useNavigate();
 
-  const handleLogin = () => {
-    // Simulated backend response
-    login({
-      id: "123",
-      name: "Hemraj",
-      role: "candidate",
-    });
+  const handleLogin = async () => {
+    try {
+      const response = await loginUser({
+        email: "test@test.com",
+        password: "123456",
+      });
 
-    navigate("dashboard/candidate");
+      login(response.data.user);
+      navigate("dashboard/candidate");
+    } catch (error) {
+      console.error("Login failed", error);
+    }
+    
   };
 
   return (
